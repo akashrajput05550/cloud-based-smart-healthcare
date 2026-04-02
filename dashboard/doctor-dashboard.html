@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+<div class="flex min-h-screen">
+
+    <!-- SIDEBAR -->
+    <aside class="w-64 bg-blue-900 text-white p-6 space-y-6">
+        <h2 class="text-2xl font-bold">👨‍⚕️ Doctor</h2>
+
+        <nav class="space-y-4">
+            <a href="#" class="block hover:text-gray-300">📊 Dashboard</a>
+            <a href="#" class="block hover:text-gray-300">📅 Appointments</a>
+        </nav>
+
+        <button onclick="logout()" 
+            class="bg-red-600 px-3 py-2 rounded w-full mt-6">
+            Logout
+        </button>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 p-10">
+
+        <h1 class="text-3xl font-bold text-blue-900 mb-6">
+            Doctor Dashboard
+        </h1>
+
+        <!-- STAT CARDS -->
+        <div class="grid grid-cols-3 gap-6 mb-8">
+
+            <div class="bg-white p-6 rounded shadow text-center">
+                <h2 class="text-2xl font-bold text-blue-900" id="totalAppointments">0</h2>
+                <p class="text-gray-600">Total Appointments</p>
+            </div>
+
+            <div class="bg-white p-6 rounded shadow text-center">
+                <h2 class="text-2xl font-bold text-green-600" id="approvedAppointments">0</h2>
+                <p class="text-gray-600">Approved</p>
+            </div>
+
+            <div class="bg-white p-6 rounded shadow text-center">
+                <h2 class="text-2xl font-bold text-yellow-600" id="pendingAppointments">0</h2>
+                <p class="text-gray-600">Pending</p>
+            </div>
+
+        </div>
+
+        <!-- APPOINTMENTS TABLE -->
+        <div class="bg-white p-6 rounded shadow">
+            <h2 class="text-xl font-bold mb-4">Your Appointments</h2>
+
+            <table class="w-full border">
+                <thead>
+                    <tr class="bg-blue-100">
+                        <th class="border p-2">Patient</th>
+                        <th class="border p-2">Date</th>
+                        <th class="border p-2">Time</th>
+                        <th class="border p-2">Status</th>
+                        <th class="border p-2">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="appointmentTable"></tbody>
+            </table>
+        </div>
+
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../assets/js/supabase.js"></script>
+<script src="../assets/js/auth.js"></script>
+
+<script>
+    protectDashboard("doctor");
+    loadProfile();
+    loadAppointments();
+    loadDoctorStats();
+</script>
+
+
+
+</body>
+</html>

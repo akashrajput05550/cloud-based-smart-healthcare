@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+<div class="flex min-h-screen">
+
+    <!-- SIDEBAR -->
+    <aside class="w-64 bg-blue-900 text-white p-6 space-y-6">
+        <h2 class="text-2xl font-bold">🧑‍⚕️ Patient</h2>
+
+        <nav class="space-y-4">
+            <a href="#" class="block hover:text-gray-300">📊 Dashboard</a>
+            <a href="#" class="block hover:text-gray-300">📅 My Appointments</a>
+        </nav>
+
+        <button onclick="logout()" 
+            class="bg-red-600 px-3 py-2 rounded w-full mt-6">
+            Logout
+        </button>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 p-10">
+
+        <h1 class="text-3xl font-bold text-blue-900 mb-6">
+            Patient Dashboard
+        </h1>
+
+        <!-- BOOK APPOINTMENT -->
+        <div class="bg-white p-6 rounded shadow mb-8">
+            <h2 class="text-xl font-bold mb-4">Book Appointment</h2>
+
+            <input id="doctorEmail" placeholder="Doctor Email"
+                class="w-full border p-2 mb-3">
+
+            <input type="date" id="appointmentDate"
+                class="w-full border p-2 mb-3">
+
+            <input type="time" id="appointmentTime"
+                class="w-full border p-2 mb-3">
+
+            <button onclick="bookAppointment()"
+                class="bg-blue-900 text-white px-4 py-2 rounded">
+                Book Appointment
+            </button>
+        </div>
+
+        <!-- MY APPOINTMENTS -->
+        <div class="bg-white p-6 rounded shadow">
+            <h2 class="text-xl font-bold mb-4">My Appointments</h2>
+
+            <table class="w-full border">
+                <thead>
+                    <tr class="bg-blue-100">
+                        <th class="border p-2">Doctor</th>
+                        <th class="border p-2">Date</th>
+                        <th class="border p-2">Time</th>
+                        <th class="border p-2">Status</th>
+                    </tr>
+                </thead>
+                <tbody id="patientAppointmentTable"></tbody>
+            </table>
+        </div>
+
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../assets/js/supabase.js"></script>
+<script src="../assets/js/auth.js"></script>
+
+<script>
+    protectDashboard("patient");
+    loadPatientAppointments();
+</script>
+
+</body>
+</html>

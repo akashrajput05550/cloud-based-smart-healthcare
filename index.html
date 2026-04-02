@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CBSHMS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .fade-in {
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+
+<!-- NAVBAR -->
+<nav class="bg-blue-900 text-white px-8 py-4 flex justify-between items-center shadow-md">
+    <h1 class="text-xl font-bold tracking-wide">CBSHMS</h1>
+
+    <div class="space-x-6">
+        <a href="login.html" class="hover:text-gray-200">Login</a>
+        <a href="register.html" 
+           class="bg-white text-blue-900 px-4 py-2 rounded font-semibold hover:bg-gray-200">
+            Register
+        </a>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="bg-gradient-to-r from-blue-900 to-indigo-700 text-white py-24 px-8">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-10">
+
+        <div class="fade-in">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                Cloud Based Smart  
+                <span class="text-yellow-400">Healthcare System</span>
+            </h1>
+
+            <p class="text-lg text-gray-200 mb-8">
+                A secure, scalable and real-time healthcare management solution
+                for Admins, Doctors and Patients.
+            </p>
+
+            <div class="space-x-4">
+                <a href="register.html"
+                   class="bg-yellow-400 text-blue-900 px-6 py-3 rounded font-semibold hover:bg-yellow-300">
+                    Get Started
+                </a>
+
+                <a href="login.html"
+                   class="border border-white px-6 py-3 rounded hover:bg-white hover:text-blue-900">
+                    Login
+                </a>
+            </div>
+        </div>
+
+        <!-- Animated Hero Image -->
+        <div class="fade-in">
+            <img src="https://cdn-icons-png.flaticon.com/512/3209/3209265.png" 
+                 class="w-80 mx-auto animate-bounce"
+                 alt="Healthcare Illustration">
+        </div>
+
+    </div>
+</section>
+
+<!-- STATISTICS SECTION -->
+<section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+
+        <div>
+            <h2 class="text-4xl font-bold text-blue-900 counter" data-target="100">0</h2>
+            <p class="text-gray-600 mt-2">Registered Patients</p>
+        </div>
+
+        <div>
+            <h2 class="text-4xl font-bold text-blue-900 counter" data-target="25">0</h2>
+            <p class="text-gray-600 mt-2">Expert Doctors</p>
+        </div>
+
+        <div>
+            <h2 class="text-4xl font-bold text-blue-900 counter" data-target="300">0</h2>
+            <p class="text-gray-600 mt-2">Appointments Managed</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="py-16 px-8 bg-gray-50">
+
+    <h2 class="text-3xl font-bold text-center text-blue-900 mb-12">
+        Powerful Features
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+            <h3 class="text-xl font-semibold mb-4 text-blue-800">
+                🔐 Secure Role Access
+            </h3>
+            <p class="text-gray-600">
+                Admin, Doctor and Patient dashboards with role-based protection.
+            </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+            <h3 class="text-xl font-semibold mb-4 text-blue-800">
+                📅 Real-Time Booking
+            </h3>
+            <p class="text-gray-600">
+                Smart appointment booking with instant approval system.
+            </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+            <h3 class="text-xl font-semibold mb-4 text-blue-800">
+                ☁ Cloud Database
+            </h3>
+            <p class="text-gray-600">
+                Powered by Supabase for secure and scalable cloud storage.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-gray-400 text-center py-6 text-sm">
+    © 2026 CBSHMS | Cloud Based Smart Healthcare Management System
+</footer>
+
+<!-- COUNTER SCRIPT -->
+<script>
+    const counters = document.querySelectorAll(".counter");
+
+    counters.forEach(counter => {
+        counter.innerText = "0";
+
+        const updateCounter = () => {
+            const target = +counter.getAttribute("data-target");
+            const current = +counter.innerText;
+
+            const increment = target / 100;
+
+            if (current < target) {
+                counter.innerText = Math.ceil(current + increment);
+                setTimeout(updateCounter, 20);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        updateCounter();
+    });
+</script>
+
+</body>
+</html>
