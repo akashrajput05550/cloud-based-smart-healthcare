@@ -1,0 +1,493 @@
+/* =========================================================
+   PATIENT DOCTORS PAGE
+========================================================= */
+
+.patient-doctors-page {
+  min-height: 100vh;
+  background: #f4f7fc;
+  color: #123b73;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.patient-doctors-navbar {
+  height: 78px;
+  background: #ffffff;
+
+  border-bottom: 1px solid #dce5f2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6%;
+  box-sizing: border-box;
+}
+
+.patient-doctors-logo {
+  font-size: 30px;
+  font-weight: 800;
+
+  color: #174a8b;
+  letter-spacing: 1px;
+}
+
+.patient-doctors-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.patient-doctors-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #486687;
+}
+
+.patient-doctors-logout {
+  border: none;
+
+  background: #174a9b;
+  color: white;
+
+  padding: 13px 28px;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.patient-doctors-logout:hover {
+  background: #103b82;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.patient-doctors-container {
+  width: 88%;
+  max-width: 1450px;
+
+  margin: 0 auto;
+
+  padding: 48px 0 70px;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.patient-doctors-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 35px;
+}
+
+.patient-doctors-header h1 {
+  margin: 0 0 8px;
+
+  font-size: 38px;
+  font-weight: 800;
+
+  color: #174a8b;
+}
+
+.patient-doctors-header p {
+  margin: 0;
+
+  font-size: 17px;
+
+  color: #5a7494;
+}
+
+
+/* =========================================================
+   DASHBOARD BUTTON
+========================================================= */
+
+.patient-doctors-dashboard-button {
+  background: white;
+
+  border: 1px solid #d4dfef;
+
+  color: #174a8b;
+
+  padding: 13px 25px;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.patient-doctors-dashboard-button:hover {
+  background: #eef4ff;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.patient-doctors-error {
+  background: #ffe3e3;
+
+  border: 1px solid #ffb7b7;
+
+  color: #c40000;
+
+  padding: 16px;
+
+  border-radius: 10px;
+
+  text-align: center;
+
+  margin-bottom: 25px;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   DOCTOR GRID
+========================================================= */
+
+.patient-doctors-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 28px;
+}
+
+
+/* =========================================================
+   DOCTOR CARD
+========================================================= */
+
+.patient-doctor-card {
+  background: white;
+
+  border: 1px solid #dfe7f2;
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  display: flex;
+
+  gap: 25px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 8px 25px rgba(40, 75, 120, 0.06);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.patient-doctor-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 15px 35px rgba(40, 75, 120, 0.12);
+}
+
+
+/* =========================================================
+   DOCTOR ICON
+========================================================= */
+
+.patient-doctor-icon {
+  min-width: 75px;
+  height: 75px;
+
+  border-radius: 50%;
+
+  background: #eef4ff;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 38px;
+}
+
+
+/* =========================================================
+   DOCTOR CONTENT
+========================================================= */
+
+.patient-doctor-content {
+  flex: 1;
+}
+
+.patient-doctor-content h2 {
+  margin: 0 0 6px;
+
+  font-size: 24px;
+  font-weight: 800;
+
+  color: #174a8b;
+}
+
+.patient-doctor-specialization {
+  margin: 0 0 20px;
+
+  color: #2c63c6;
+
+  font-size: 16px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.patient-doctor-detail {
+  display: flex;
+
+  flex-direction: column;
+
+  margin-bottom: 12px;
+
+  gap: 3px;
+}
+
+.patient-doctor-detail strong {
+  font-size: 13px;
+
+  color: #174a8b;
+}
+
+.patient-doctor-detail span {
+  font-size: 14px;
+
+  color: #607a99;
+
+  word-break: break-word;
+}
+
+
+/* =========================================================
+   BOOK BUTTON
+========================================================= */
+
+.patient-doctor-book-button {
+  margin-top: 12px;
+
+  width: 100%;
+
+  border: none;
+
+  background: #1f4fa3;
+
+  color: white;
+
+  padding: 13px 18px;
+
+  border-radius: 9px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.patient-doctor-book-button:hover {
+  background: #163f88;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.patient-doctors-loading {
+  background: white;
+
+  min-height: 300px;
+
+  border: 1px solid #dfe7f2;
+
+  border-radius: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.patient-doctors-loading p {
+  margin-top: 15px;
+
+  color: #5a7494;
+
+  font-size: 16px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   SPINNER
+========================================================= */
+
+.patient-doctors-spinner {
+  width: 42px;
+  height: 42px;
+
+  border: 4px solid #dce8fa;
+
+  border-top-color: #1f56ad;
+
+  border-radius: 50%;
+
+  animation: patientDoctorsSpin 0.8s linear infinite;
+}
+
+@keyframes patientDoctorsSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.patient-doctors-empty {
+  background: white;
+
+  min-height: 330px;
+
+  border: 1px solid #dfe7f2;
+
+  border-radius: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.patient-doctors-empty-icon {
+  font-size: 55px;
+
+  margin-bottom: 15px;
+}
+
+.patient-doctors-empty h2 {
+  margin: 0 0 10px;
+
+  color: #174a8b;
+
+  font-size: 25px;
+}
+
+.patient-doctors-empty p {
+  margin: 0;
+
+  color: #607a99;
+
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .patient-doctors-container {
+    width: 92%;
+  }
+
+  .patient-doctors-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .patient-doctors-navbar {
+    padding: 0 20px;
+  }
+
+  .patient-doctors-logo {
+    font-size: 24px;
+  }
+
+  .patient-doctors-title {
+    display: none;
+  }
+
+  .patient-doctors-logout {
+    padding: 10px 18px;
+
+    font-size: 14px;
+  }
+
+  .patient-doctors-container {
+    width: 94%;
+
+    padding-top: 30px;
+  }
+
+  .patient-doctors-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .patient-doctors-header h1 {
+    font-size: 30px;
+  }
+
+  .patient-doctor-card {
+    flex-direction: column;
+
+    padding: 25px;
+  }
+
+  .patient-doctor-icon {
+    width: 70px;
+  }
+}

@@ -1,0 +1,402 @@
+/* =========================================
+   DOCTOR APPOINTMENTS PAGE
+========================================= */
+
+.doctor-appointments-page {
+  min-height: 100vh;
+  background: #f4f7fc;
+  color: #174b8f;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.doctor-header {
+  height: 72px;
+  background: #ffffff;
+  border-bottom: 1px solid #dce5f2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6%;
+}
+
+.doctor-logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: #174b8f;
+}
+
+.doctor-header-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.doctor-logout-button {
+  border: none;
+  background: #174b8f;
+  color: white;
+
+  padding: 10px 22px;
+  border-radius: 7px;
+
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.doctor-logout-button:hover {
+  background: #123d76;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.doctor-appointments-container {
+  width: 90%;
+  max-width: 1050px;
+
+  margin: 0 auto;
+  padding: 45px 0;
+}
+
+
+/* =========================================
+   PAGE TITLE
+========================================= */
+
+.doctor-page-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.doctor-page-title-row h1 {
+  margin: 0;
+
+  font-size: 34px;
+  font-weight: 800;
+
+  color: #174b8f;
+}
+
+.doctor-page-title-row p {
+  margin-top: 8px;
+
+  font-size: 15px;
+  color: #55739a;
+}
+
+.doctor-dashboard-button {
+  text-decoration: none;
+
+  background: white;
+  color: #174b8f;
+
+  border: 1px solid #cbd9ec;
+
+  padding: 10px 20px;
+  border-radius: 7px;
+
+  font-weight: 600;
+}
+
+.doctor-dashboard-button:hover {
+  background: #eef4fc;
+}
+
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+.doctor-appointment-error {
+  background: #ffe5e5;
+  color: #c62828;
+
+  border: 1px solid #ffb8b8;
+
+  padding: 14px 18px;
+  border-radius: 7px;
+
+  margin-bottom: 20px;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   LOADING / EMPTY MESSAGE
+========================================= */
+
+.doctor-appointment-message {
+  background: white;
+
+  border: 1px solid #dce5f2;
+  border-radius: 14px;
+
+  padding: 70px 30px;
+
+  text-align: center;
+
+  box-shadow: 0 5px 20px rgba(30, 70, 120, 0.06);
+}
+
+.doctor-empty-icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.doctor-appointment-message h3 {
+  margin: 10px 0;
+
+  color: #174b8f;
+  font-size: 22px;
+}
+
+.doctor-appointment-message p {
+  color: #6680a0;
+}
+
+
+/* =========================================
+   TABLE CONTAINER
+========================================= */
+
+.doctor-appointments-table-container {
+  background: white;
+
+  border: 1px solid #dce5f2;
+  border-radius: 14px;
+
+  overflow-x: auto;
+
+  box-shadow: 0 5px 20px rgba(30, 70, 120, 0.06);
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.doctor-appointments-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 800px;
+}
+
+.doctor-appointments-table thead {
+  background: #edf4ff;
+}
+
+.doctor-appointments-table th {
+  padding: 16px 14px;
+
+  text-align: left;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #174b8f;
+
+  border-bottom: 1px solid #dce5f2;
+}
+
+.doctor-appointments-table td {
+  padding: 16px 14px;
+
+  font-size: 14px;
+
+  color: #405f83;
+
+  border-bottom: 1px solid #edf1f7;
+}
+
+.doctor-appointments-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+
+/* =========================================
+   PATIENT INFORMATION
+========================================= */
+
+.doctor-patient-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.doctor-patient-info strong {
+  color: #174b8f;
+  font-size: 13px;
+}
+
+.doctor-patient-info span {
+  color: #55739a;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.doctor-appointment-status {
+  display: inline-block;
+
+  padding: 6px 13px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.status-pending {
+  background: #fff4d6;
+  color: #9a6800;
+}
+
+.status-approved {
+  background: #dcf7e5;
+  color: #16803c;
+}
+
+.status-rejected {
+  background: #ffe1e1;
+  color: #c62828;
+}
+
+.status-cancelled {
+  background: #eeeeee;
+  color: #666666;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.doctor-action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.approve-button,
+.reject-button {
+  border: none;
+
+  padding: 8px 13px;
+
+  border-radius: 6px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.approve-button {
+  background: #16803c;
+  color: white;
+}
+
+.approve-button:hover {
+  background: #126b32;
+}
+
+.reject-button {
+  background: #d93025;
+  color: white;
+}
+
+.reject-button:hover {
+  background: #b9231b;
+}
+
+.approve-button:disabled,
+.reject-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   ACTION RESULT TEXT
+========================================= */
+
+.approved-text {
+  color: #16803c;
+  font-weight: 700;
+}
+
+.rejected-text {
+  color: #d93025;
+  font-weight: 700;
+}
+
+.cancelled-text {
+  color: #777777;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .doctor-header {
+    padding: 0 20px;
+  }
+
+  .doctor-logo {
+    font-size: 23px;
+  }
+
+  .doctor-header-right {
+    gap: 10px;
+  }
+
+  .doctor-header-right span {
+    display: none;
+  }
+
+  .doctor-appointments-container {
+    width: 94%;
+    padding: 30px 0;
+  }
+
+  .doctor-page-title-row {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .doctor-page-title-row h1 {
+    font-size: 27px;
+  }
+
+  .doctor-dashboard-button {
+    white-space: nowrap;
+  }
+
+  .doctor-action-buttons {
+    flex-direction: column;
+  }
+
+}

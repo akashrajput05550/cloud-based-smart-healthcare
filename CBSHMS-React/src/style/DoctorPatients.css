@@ -1,0 +1,398 @@
+/* =========================================
+   DOCTOR PATIENTS PAGE
+========================================= */
+
+.doctor-patients-page {
+  min-height: 100vh;
+
+  background: #f4f7fc;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.patients-navbar {
+  width: 100%;
+
+  min-height: 78px;
+
+  padding: 0 6%;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e3e8f0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.patients-logo {
+  color: #173f91;
+
+  font-size: 28px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.patients-nav-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+}
+
+.patients-nav-right span {
+  color: #64748b;
+
+  font-size: 16px;
+
+  font-weight: 600;
+}
+
+.patients-logout {
+  padding: 11px 23px;
+
+  background: #173f91;
+
+  color: white;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition: 0.25s;
+}
+
+.patients-logout:hover {
+  background: #0f2f73;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.patients-container {
+  width: 90%;
+
+  max-width: 1350px;
+
+  margin: 0 auto;
+
+  padding: 42px 0 70px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.patients-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+.patients-header h1 {
+  margin: 0 0 8px;
+
+  color: #173f91;
+
+  font-size: 30px;
+
+  font-weight: 700;
+}
+
+.patients-header p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 15px;
+}
+
+.patients-back {
+  padding: 11px 19px;
+
+  background: #ffffff;
+
+  color: #173f91;
+
+  border: 1px solid #dbe3f0;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition: 0.25s;
+}
+
+.patients-back:hover {
+  background: #173f91;
+
+  color: white;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.patients-error {
+  margin-bottom: 20px;
+
+  padding: 14px 18px;
+
+  background: #fee2e2;
+
+  border: 1px solid #fecaca;
+
+  border-radius: 8px;
+
+  color: #b91c1c;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   EMPTY / LOADING
+========================================= */
+
+.patients-message {
+  padding: 60px 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 16px;
+
+  text-align: center;
+
+  box-shadow:
+    0 6px 20px rgba(15, 23, 42, 0.05);
+}
+
+.patients-empty-icon {
+  font-size: 45px;
+
+  margin-bottom: 12px;
+}
+
+.patients-message h2 {
+  margin: 0 0 8px;
+
+  color: #173f91;
+
+  font-size: 22px;
+}
+
+.patients-message p {
+  margin: 0;
+
+  color: #64748b;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.patients-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 6px 20px rgba(15, 23, 42, 0.05);
+}
+
+.patients-table {
+  width: 100%;
+
+  min-width: 700px;
+
+  border-collapse: collapse;
+}
+
+.patients-table th {
+  padding: 17px;
+
+  background: #eff6ff;
+
+  color: #173f91;
+
+  text-align: left;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  border-bottom: 1px solid #dbeafe;
+}
+
+.patients-table td {
+  padding: 17px;
+
+  color: #475569;
+
+  font-size: 14px;
+
+  border-bottom: 1px solid #eef2f7;
+}
+
+.patients-table tbody tr {
+  transition: background 0.2s;
+}
+
+.patients-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.patients-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.patient-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  text-transform: capitalize;
+}
+
+.patient-status-pending {
+  background: #fef3c7;
+
+  color: #92400e;
+}
+
+.patient-status-approved {
+  background: #dcfce7;
+
+  color: #166534;
+}
+
+.patient-status-rejected {
+  background: #fee2e2;
+
+  color: #991b1b;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+  .patients-container {
+    width: 92%;
+
+    padding-top: 30px;
+  }
+
+  .patients-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .patients-navbar {
+    min-height: 70px;
+
+    padding: 14px 20px;
+  }
+
+  .patients-logo {
+    font-size: 23px;
+  }
+
+  .patients-nav-right {
+    gap: 10px;
+  }
+
+  .patients-nav-right span {
+    display: none;
+  }
+
+  .patients-logout {
+    padding: 9px 16px;
+  }
+
+  .patients-container {
+    width: 92%;
+
+    padding: 25px 0 45px;
+  }
+
+  .patients-header h1 {
+    font-size: 25px;
+  }
+
+  .patients-header p {
+    font-size: 14px;
+  }
+
+  .patients-table-wrapper {
+    border-radius: 12px;
+  }
+
+}

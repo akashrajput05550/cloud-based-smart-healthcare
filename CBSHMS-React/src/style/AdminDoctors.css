@@ -1,0 +1,424 @@
+/* =====================================
+   ADMIN DOCTORS PAGE
+===================================== */
+
+.admin-doctors-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+  color: #173b7a;
+}
+
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+.admin-doctors-navbar {
+  height: 76px;
+  background: #ffffff;
+  border-bottom: 1px solid #dfe6f0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6%;
+  box-sizing: border-box;
+}
+
+.admin-doctors-logo {
+  font-size: 30px;
+  font-weight: 800;
+  color: #17469d;
+  letter-spacing: 1px;
+}
+
+.admin-doctors-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+
+  color: #526b91;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.admin-doctors-logout {
+  border: none;
+  background: #17469d;
+  color: #ffffff;
+
+  padding: 11px 24px;
+  border-radius: 8px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.admin-doctors-logout:hover {
+  background: #10377d;
+}
+
+
+/* =====================================
+   MAIN CONTAINER
+===================================== */
+
+.admin-doctors-container {
+  width: 86%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+  padding: 45px 0 70px;
+}
+
+
+/* =====================================
+   PAGE HEADING
+===================================== */
+
+.admin-doctors-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+.admin-doctors-heading h1 {
+  margin: 0 0 8px;
+
+  font-size: 30px;
+  font-weight: 800;
+  color: #17469d;
+}
+
+.admin-doctors-heading p {
+  margin: 0;
+
+  color: #607797;
+  font-size: 15px;
+}
+
+.admin-doctors-dashboard-button {
+  display: inline-block;
+
+  text-decoration: none;
+
+  background: #ffffff;
+  color: #17469d;
+
+  border: 1px solid #cbd9ea;
+
+  padding: 11px 20px;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.admin-doctors-dashboard-button:hover {
+  background: #f0f5fc;
+}
+
+
+/* =====================================
+   ERROR
+===================================== */
+
+.admin-doctors-error {
+  margin-bottom: 20px;
+
+  padding: 13px 18px;
+
+  background: #ffe5e5;
+  border: 1px solid #ffb8b8;
+
+  color: #c62828;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+}
+
+
+/* =====================================
+   DOCTORS CARD
+===================================== */
+
+.admin-doctors-card {
+  background: #ffffff;
+
+  border: 1px solid #e0e7f0;
+  border-radius: 16px;
+
+  box-shadow: 0 7px 22px rgba(25, 60, 110, 0.06);
+
+  overflow: hidden;
+}
+
+
+/* =====================================
+   CARD HEADER
+===================================== */
+
+.admin-doctors-card-header {
+  padding: 25px 28px;
+
+  border-bottom: 1px solid #e4eaf2;
+}
+
+.admin-doctors-card-header h2 {
+  margin: 0 0 6px;
+
+  font-size: 22px;
+  color: #17469d;
+}
+
+.admin-doctors-card-header p {
+  margin: 0;
+
+  color: #607797;
+  font-size: 14px;
+}
+
+
+/* =====================================
+   TABLE
+===================================== */
+
+.admin-doctors-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.admin-doctors-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 750px;
+}
+
+.admin-doctors-table th {
+  background: #f4f7fb;
+
+  color: #17469d;
+
+  text-align: left;
+
+  padding: 15px 20px;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  border-bottom: 1px solid #e0e7f0;
+}
+
+.admin-doctors-table td {
+  padding: 17px 20px;
+
+  color: #526b91;
+
+  font-size: 14px;
+
+  border-bottom: 1px solid #edf1f6;
+}
+
+.admin-doctors-table tbody tr:hover {
+  background: #f9fbfe;
+}
+
+.admin-doctors-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =====================================
+   DOCTOR NAME
+===================================== */
+
+.admin-doctor-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #173b7a;
+}
+
+.admin-doctor-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eef4ff;
+
+  border-radius: 50%;
+
+  font-size: 20px;
+}
+
+
+/* =====================================
+   ROLE
+===================================== */
+
+.admin-doctor-role {
+  display: inline-block;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  background: #e7f0ff;
+  color: #17469d;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-transform: capitalize;
+}
+
+
+/* =====================================
+   DELETE BUTTON
+===================================== */
+
+.admin-doctor-delete {
+  border: none;
+
+  background: #dc3545;
+  color: #ffffff;
+
+  padding: 8px 15px;
+
+  border-radius: 7px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.admin-doctor-delete:hover {
+  background: #b42332;
+}
+
+
+/* =====================================
+   LOADING / EMPTY
+===================================== */
+
+.admin-doctors-message {
+  background: #ffffff;
+
+  border: 1px solid #e0e7f0;
+
+  border-radius: 16px;
+
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  box-shadow: 0 7px 22px rgba(25, 60, 110, 0.05);
+}
+
+.admin-doctors-message p {
+  color: #607797;
+  font-size: 14px;
+}
+
+.admin-doctors-message h2 {
+  margin: 10px 0 5px;
+
+  color: #17469d;
+}
+
+.admin-doctors-empty-icon {
+  font-size: 45px;
+}
+
+
+/* =====================================
+   SPINNER
+===================================== */
+
+.admin-doctors-spinner {
+  width: 35px;
+  height: 35px;
+
+  border: 4px solid #e3ebf7;
+  border-top: 4px solid #17469d;
+
+  border-radius: 50%;
+
+  animation: adminDoctorsSpin 0.8s linear infinite;
+}
+
+@keyframes adminDoctorsSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 800px) {
+  .admin-doctors-container {
+    width: 90%;
+  }
+
+  .admin-doctors-heading {
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .admin-doctors-navbar {
+    padding: 0 20px;
+  }
+
+  .admin-doctors-logo {
+    font-size: 24px;
+  }
+
+  .admin-doctors-nav-title {
+    display: none;
+  }
+
+  .admin-doctors-container {
+    width: 92%;
+    padding-top: 30px;
+  }
+
+  .admin-doctors-heading {
+    flex-direction: column;
+  }
+
+  .admin-doctors-heading h1 {
+    font-size: 25px;
+  }
+
+  .admin-doctors-dashboard-button {
+    align-self: flex-start;
+  }
+}

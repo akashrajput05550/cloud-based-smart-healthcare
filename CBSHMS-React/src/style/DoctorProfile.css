@@ -1,0 +1,428 @@
+/* ================================
+   DOCTOR PROFILE PAGE
+================================ */
+
+.doctor-profile-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+  color: #173b7a;
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+.profile-navbar {
+  height: 76px;
+  background: #ffffff;
+  border-bottom: 1px solid #dfe6f0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6%;
+}
+
+.profile-logo {
+  font-size: 30px;
+  font-weight: 800;
+  color: #17469d;
+  letter-spacing: 1px;
+}
+
+.profile-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: #526b91;
+}
+
+.profile-logout {
+  border: none;
+  background: #17469d;
+  color: white;
+
+  padding: 11px 24px;
+  border-radius: 8px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.profile-logout:hover {
+  background: #10377d;
+}
+
+
+/* ================================
+   CONTAINER
+================================ */
+
+.profile-container {
+  width: 86%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 45px 0 70px;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+.profile-header h1 {
+  margin: 0 0 8px;
+
+  font-size: 34px;
+  font-weight: 800;
+  color: #17469d;
+}
+
+.profile-header p {
+  margin: 0;
+
+  color: #607797;
+  font-size: 15px;
+}
+
+.profile-dashboard-btn {
+  text-decoration: none;
+
+  background: #ffffff;
+  color: #17469d;
+
+  border: 1px solid #d5dfed;
+
+  padding: 12px 22px;
+  border-radius: 9px;
+
+  font-weight: 700;
+}
+
+.profile-dashboard-btn:hover {
+  background: #eef4ff;
+}
+
+
+/* ================================
+   PROFILE CARD
+================================ */
+
+.profile-card {
+  background: #ffffff;
+
+  border: 1px solid #e0e7f0;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 25px rgba(25, 60, 110, 0.07);
+
+  overflow: hidden;
+}
+
+
+/* ================================
+   PROFILE CARD HEADER
+================================ */
+
+.profile-card-header {
+  min-height: 150px;
+
+  padding: 30px 35px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  background: linear-gradient(
+    135deg,
+    #1d4699,
+    #2864df
+  );
+
+  color: white;
+}
+
+.profile-avatar {
+  width: 72px;
+  height: 72px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 34px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.profile-card-header h2 {
+  margin: 0 0 7px;
+
+  font-size: 25px;
+}
+
+.profile-card-header p {
+  margin: 0;
+
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.profile-role {
+  margin-left: auto;
+
+  padding: 9px 22px;
+
+  border-radius: 25px;
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  background: rgba(255, 255, 255, 0.12);
+
+  font-weight: 700;
+}
+
+
+/* ================================
+   FORM
+================================ */
+
+.profile-form {
+  padding: 35px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 24px 30px;
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-full {
+  grid-column: 1 / -1;
+}
+
+.profile-field label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #244574;
+}
+
+.profile-field input {
+  width: 100%;
+  box-sizing: border-box;
+
+  height: 48px;
+
+  padding: 0 15px;
+
+  border: 1px solid #d2dce9;
+  border-radius: 8px;
+
+  font-size: 15px;
+
+  color: #243d61;
+  background: #ffffff;
+
+  outline: none;
+}
+
+.profile-field input:focus {
+  border-color: #2864df;
+  box-shadow: 0 0 0 3px rgba(40, 100, 223, 0.1);
+}
+
+.profile-field input:disabled {
+  background: #f4f6f9;
+  color: #65758c;
+
+  cursor: not-allowed;
+}
+
+
+/* ================================
+   ACTIONS
+================================ */
+
+.profile-actions {
+  padding: 0 35px 35px;
+
+  display: flex;
+  gap: 12px;
+}
+
+.profile-edit-btn,
+.profile-save-btn,
+.profile-cancel-btn {
+  border: none;
+
+  padding: 12px 24px;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.profile-edit-btn,
+.profile-save-btn {
+  background: #17469d;
+  color: white;
+}
+
+.profile-edit-btn:hover,
+.profile-save-btn:hover {
+  background: #10377d;
+}
+
+.profile-cancel-btn {
+  background: #eef1f5;
+  color: #425a79;
+}
+
+.profile-cancel-btn:hover {
+  background: #e0e5ec;
+}
+
+
+/* ================================
+   QUICK LINKS
+================================ */
+
+.profile-quick-links {
+  margin-top: 25px;
+
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.profile-quick-btn {
+  text-decoration: none;
+
+  background: #17469d;
+  color: white;
+
+  padding: 12px 20px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.profile-quick-btn:hover {
+  background: #10377d;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+  .profile-navbar {
+    padding: 0 25px;
+  }
+
+  .profile-nav-right span {
+    display: none;
+  }
+
+  .profile-container {
+    width: 90%;
+    padding-top: 30px;
+  }
+
+  .profile-header {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .profile-header h1 {
+    font-size: 27px;
+  }
+
+  .profile-form {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-full {
+    grid-column: auto;
+  }
+
+  .profile-card-header {
+    padding: 25px;
+  }
+
+  .profile-role {
+    display: none;
+  }
+
+  .profile-form {
+    padding: 25px;
+  }
+
+  .profile-actions {
+    padding: 0 25px 25px;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .profile-logo {
+    font-size: 24px;
+  }
+
+  .profile-header {
+    flex-direction: column;
+  }
+
+  .profile-dashboard-btn {
+    align-self: flex-start;
+  }
+
+  .profile-card-header {
+    align-items: flex-start;
+  }
+
+  .profile-avatar {
+    width: 55px;
+    height: 55px;
+    font-size: 26px;
+  }
+
+  .profile-card-header h2 {
+    font-size: 20px;
+  }
+
+}
